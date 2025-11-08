@@ -13,3 +13,11 @@ body {
     padding: 2.5rem;
     background-color: var(--off-white);
 }
+
+a:link {  
+    text-decoration: underline;
+}
+
+a:hover {
+    color: var(--neutral-grey);
+}
