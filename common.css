@@ -1,0 +1,15 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+:root {
+    /* neutral base */
+    --off-white: #FAFAFA; 
+    --charcoal: #2d2d2d;
+    --neutral-grey: #898989;
+}
+
+body {
+    padding: 2.5rem;
+    background-color: var(--off-white);
+}
