@@ -31,39 +31,212 @@
     font-display: swap;
 }
 
-body {
-    background-color: aquamarine;
+*, *::before, *::after {
+    box-sizing: border-box;
 }
 
+:root {
+	font-family: 'Geist';
+    font-weight: 400;
+	font-size: 105%;
+    scroll-behavior: smooth;
+
+    /* VARIABLES */
+    --black: #2E2E2E;
+    --white: #FAFAFA
+
+}
+
+body {
+    background-color: var(--white);
+    padding: 0rem;
+    height: 100%;
+}
 
 header {}
 
-nav {}
+section, header, footer {
+    padding: 0.875rem;
+}
 
-ol {}
+ol {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
 
 li {}
 
-main {}
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 5.25rem;
+}
 
-article {}
+article {
+    display: flex;
+    flex-direction: column;
+}
 
-section {}
+.intro {
+    height: 100svh;
+    height: 100vh;
+    overflow: hidden;
+    justify-content: space-between;
+    text-align: start;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    gap: 3.375rem;
+}
+
+figure {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 14rem;
+    overflow: visible;
+    z-index: -1;
+}
+
+img {
+    background-color: blue;
+    inline-size: 100%;
+	object-fit: cover;
+    object-position: top center; /* Side. */
+}
+/* DIV */
+.title {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.source {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.citation {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    align-content: center;
+
+    @media (width > 900px) {
+    width: 50%;
+    height: 20rem;
+    }
+}
+
+.bulk {
+    display: flex;
+    flex-direction: column;
+    gap: 2.125rem;
+}
+
+.citation blockquote:nth-child(2),
+.citation blockquote:nth-child(3),
+.citation blockquote:nth-child(4) { position: absolute; }
+
+.citation blockquote:nth-child(1) {
+    transform: rotate(-18deg);
+}
+.citation blockquote:nth-child(2) { 
+    color: rgba(0, 0, 0, 0.06);
+    transform: rotate(-8deg);
+}
+.citation blockquote:nth-child(3) { 
+    color: rgba(0, 0, 0, 0.04);
+    transform: rotate(8deg);
+}
+.citation blockquote:nth-child(4) { 
+    color: rgba(0, 0, 0, 0.02);
+    transform: rotate(-8deg);
+}
 
 footer {}
 
 /* CONTENT TYPE */
-h1 {}
+h1 {
+    font-family: 'Perfectly Nineties';
+    font-weight: 400;
+    font-size: 4rem;
+    line-height: 90%;
+    letter-spacing: -2%;
+}
 
-h2 {}
+h2 {
+    font-family: 'Perfectly Nineties';
+    font-weight: 400;
+    font-size: 3rem;
+    line-height: 100%;
+    letter-spacing: -2%;
+}
 
-aside {}
+aside {
+    /* font-family: 'Geist'; */
+    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 120%;
+    letter-spacing: -2%;
+}
 
-p {}
+p { 
+    /* font-family: 'Geist'; */
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 140%;
+    letter-spacing: 0%;
+    text-indent: 2em;
+}
 
-span {}
+.align-left {
+    text-align: left;
+    text-indent: 0em;
+}
 
-blockquote {}
+.align-center {
+    text-align: center;
+    text-indent: 0em;
+}
+
+.align-right {
+    text-align: right;
+    text-indent: 0em;
+}
+
+span {
+    text-transform: uppercase;
+}
+
+.highlight {
+    font-weight: 600;
+}
+
+.highlight::before { 
+    content: '{ ';
+}
+
+.highlight::after {  
+    content: ' }';
+    }
+
+blockquote {
+    font-family: 'Perfectly Nineties';
+    font-weight: 400;
+    font-size: 2.5rem;
+    line-height: 100%;
+    letter-spacing: 0%;
+    text-align: center;
+    text-wrap: balance;
+}
 
 a:link {  
     text-decoration: underline;
