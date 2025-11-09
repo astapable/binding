@@ -3,8 +3,14 @@
 }
 
 :root {
+
+    --spacing: 1rem;
+	font-size: 125%;
+    scroll-behavior: smooth;
+
+    
     /* neutral base */
-    --off-white: #FAFAFA; 
+    --off-white: #fafafa; 
     --charcoal: #2d2d2d;
     --neutral-grey: #898989;
 }

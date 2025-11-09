@@ -1,3 +1,110 @@
+/* FONTS */
+@font-face {
+    font-family: "Roboto";
+    src: url("fonts/Roboto-SemiBold.woff") format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url("fonts/Roboto-Regular.woff") format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Roboto_Mono";
+    src: url("fonts/RobotoMono-Regular.woff") format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Chava";
+    src: url("fonts/Chava-Regular.woff") format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+:root {
+    --spacing: 1rem;
+	font-family: 'Roboto_Mono';
+    font-weight: 400;
+	font-size: 125%;
+    scroll-behavior: smooth;
+
+    /* VERIABLES */
+    
+}
+
+/* CONTAINERS TYPE */
 body {
     background-color:bisque;
 }
+
+header {}
+
+nav {}
+
+ol {}
+
+li {}
+
+main {}
+
+article {}
+
+section {}
+
+.title{
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+footer {}
+
+/* CONTENT TYPE */
+h1 {
+    font-family: "Roboto";
+    font-weight: 600;
+    font-size: 4rem;
+    line-height: 100%;
+    letter-spacing: -2%;
+}
+
+.marker {
+    font-family: "Chava";
+    font-weight: 400;
+}
+
+h2 {}
+
+aside {
+    font-family: "Roboto";
+    font-weight: 400;
+    font-size: 2.125rem;
+    line-height: 110%;
+    letter-spacing: -2%;
+}
+
+p {}
+
+span {}
+
+blockquote {}
+
+a:link {  
+    text-decoration: underline;
+}
+
+a:hover {
+    color: var(--neutral-grey);
+}
+
+
