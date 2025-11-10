@@ -88,6 +88,8 @@ main {
     flex-direction: column;
     gap: 3.375rem;
     justify-content: flex-end;
+    background-color: none;
+    overflow: visible;
 
 }
 
