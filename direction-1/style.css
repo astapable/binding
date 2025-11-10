@@ -101,7 +101,7 @@ figure {
     display: flex;
     margin-block-start: 3.188rem;
     overflow: visible;
-    height: 10rem;
+   margin-block-end: -10rem;
 }
 
 img {
