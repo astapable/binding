@@ -76,7 +76,7 @@ main {
 }
 
 main > article:nth-child(2) {
-  margin-top: -2.75rem; /* компенсируем gap только между 1 и 2 */
+  margin-top: -2.75rem;
 }
 
 article {
@@ -118,7 +118,6 @@ img {
     display: block;
     width: 100%;
     object-position: top center;
-    /* background-color: transparent; */
 }
 /* DIV */
 .title {
