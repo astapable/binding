@@ -110,12 +110,13 @@ figure {
     display: block;
     margin-block-start: 3.188rem;
     overflow: visible;
+    width: 100%;
 }
 
 img {
     background-color: var(--black);
     display: block;
-    width: 60%;
+    width: 100%;
     object-position: top center;
 }
 /* DIV */
