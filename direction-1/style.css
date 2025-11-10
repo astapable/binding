@@ -84,6 +84,7 @@ main {
 }
 
 .cover {
+    position: relative;
     display: flex;
     flex-direction: column;
     gap: 3.375rem;
@@ -98,17 +99,15 @@ section {
 }
 
 figure {
-    display: flex;
+    display: block;
     margin-block-start: 3.188rem;
     overflow: visible;
 }
 
 img {
     background-color: var(--black);
-    display: flex;
+    display: block;
     width: 100%;
-    height: 100%;
-    object-fit: cover;
     object-position: top center;
 }
 /* DIV */
