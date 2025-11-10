@@ -75,14 +75,20 @@ main {
     gap: 5.25rem;
 }
 
-article {
+.intro {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+    min-height: 100svh;
 }
 
-.intro {
-    min-height: 100svh;
-    justify-content: space-between;
+.cl0001 {
+    display: flex;
+    flex-direction: column;
+    gap: 3.375rem;
+    justify-content: flex-end;
+
 }
 
 section {
@@ -92,9 +98,11 @@ section {
 }
 
 figure {
-    position: relative;
     display: block;
     z-index: -1;
+    margin-block-start: 3.188rem;
+    overflow: visible;
+    height: 10rem;
 }
 
 img {
@@ -104,12 +112,6 @@ img {
     height: 100%;
     object-fit: cover;
     object-position: top center;
-
-
-    inline-size: 100%;
-    height: auto;   
-    object-position: top center;
-    overflow: visible;
 }
 /* DIV */
 .title {
