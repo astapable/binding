@@ -83,12 +83,12 @@ main {
     min-height: 100svh;
 }
 
-.cl0001 {
+.cover {
     display: flex;
     flex-direction: column;
     gap: 3.375rem;
     justify-content: flex-end;
-    background-color: none;
+    margin-block-start: -10rem;
 }
 
 section {
@@ -101,7 +101,6 @@ figure {
     display: flex;
     margin-block-start: 3.188rem;
     overflow: visible;
-   margin-block-end: -10rem;
 }
 
 img {
