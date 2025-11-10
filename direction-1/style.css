@@ -115,7 +115,7 @@ figure {
 img {
     background-color: var(--black);
     display: block;
-    width: 100%;
+    width: 60%;
     object-position: top center;
 }
 /* DIV */
