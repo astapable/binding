@@ -40,11 +40,11 @@
     font-weight: 400;
 	font-size: 105%;
     scroll-behavior: smooth;
+    color: var(--black);
 
     /* VARIABLES */
     --black: #2E2E2E;
     --white: #FAFAFA
-
 }
 
 body {
