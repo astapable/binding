@@ -99,7 +99,6 @@ section {
 
 figure {
     display: flex;
-    z-index: -1;
     margin-block-start: 3.188rem;
     overflow: visible;
     height: 10rem;
