@@ -173,6 +173,7 @@ blockquote {
     width: 100%;
     display: flex;
     flex-direction: column;
+    margin-block-start: 1rem;
 }
 
 /* LINKS */
