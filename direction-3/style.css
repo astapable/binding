@@ -90,6 +90,7 @@ section {
 .cover {
     background-image: url("img/design-through-obsticles.jpg");
 	background-size: cover;
+    background-position: bottom center; /* ← прижимаем к низу */
     padding: 1rem;
     display: flex;
     flex-direction: column;
