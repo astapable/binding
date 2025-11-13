@@ -56,9 +56,14 @@ body {
 }
 
 header {
+    background-color: var(--white);
+    padding: 1rem;
+}
+
+.menu {
     position: fixed;
     width: 100%;
-    /* background-color: var(--white); */
+    background-color: transparent;
     color: var(--black);
     padding: 0.5rem;
 }
@@ -78,7 +83,7 @@ main {
 }
 
 article {
-    background-color: var(--white);
+    background-color: var(--white); /* THERE SHOULD BE ONLY 1 ARTICLE AND MORE SECTIONS. THATS CORRECT SEMANTICALLY */
     padding: 1rem;
 }
 
