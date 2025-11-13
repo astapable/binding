@@ -124,8 +124,14 @@ h1 {
     font-weight: 400;
 }
 
-h2 {}
-
+h2 {
+    font-family: "Roboto";
+    font-weight: 600;
+    font-size: 2rem;
+    line-height: 100%;
+    letter-spacing: -2%;
+    width: 100%;
+}
 
 p {
     font-weight: 400;
