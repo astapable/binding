@@ -35,7 +35,8 @@
 
     --black: #212121;
     --white: #F6F6F6;
-    --green: #ADFF87
+    --green: #ADFF87;
+    --gray: #747474;
 }
 
 body {
@@ -126,6 +127,12 @@ div{}
     gap: 2.2rem;
 }
 
+.heading {
+    display: flex;
+    flex-direction: column;
+    gap: 1.375rem;
+}
+
 .square-blk {
     width: 0.625rem;
     height: 0.625rem;
@@ -136,6 +143,12 @@ div{}
     margin-block-start: 0.3rem;
     width: 0.625rem;
     height: 3.35rem;
+    background-color: var(--green);
+}
+
+.divider {
+    width: 100%;
+    height: 0.625rem;
     background-color: var(--green);
 }
 
@@ -174,7 +187,14 @@ h1 {
     width: 100%;
 }
 
-h2 {}
+h2 {
+    font-family: 'Bebas_Neue';
+    font-weight: 400;
+    font-size: 2.5rem;
+    line-height: 100%;
+    letter-spacing: -2%;
+    color: var(--white);
+}
 
 aside {}
 
@@ -213,13 +233,13 @@ p {
 .quote {
     font-family: 'Bebas_Neue';
     font-weight: 400;
-    font-size: 2rem;
-    line-height: 100%;
+    font-size: 1.75rem;
+    line-height: 105%;
     letter-spacing: -2%;
     padding-inline-start: 0em;
     text-indent: 0em;
     color: var(--white);
-    margin-inline-start: -1.2rem;
+    margin-inline-start: -1rem;
 }
 
 .quote-mark {
@@ -235,19 +255,33 @@ p {
     margin-block-start: -2rem;
 }
 
+strong {
+    text-transform: uppercase;
+    font-weight: 600;
+    color: var(--green);
+}
+
 span {}
 
 blockquote {
     display: flex;
     flex-direction: row;
     gap: 1.8rem;
-    margin-block-end: 1.5rem;
+    margin-block-end: 1rem;
 }
 
 a:link {  
     text-decoration: underline;
+    text-decoration-color: var(--green);
+    text-decoration-thickness: 0.125rem;
+
 }
 
 a:hover {
-    color: var(--neutral-grey);
+    color: var(--green);
+}
+
+a:visited {
+    color: var(--gray);
+    text-decoration-color: var(--gray);
 }
