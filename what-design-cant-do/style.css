@@ -40,7 +40,7 @@
 }
 
 :root {
-    --spacing: 1rem;
+
 	font-family: 'Geist';
     font-weight: 400;
 	font-size: 125%;
@@ -82,11 +82,6 @@ body {
     padding: var(--null);
 }
 
-header {
-    background-color: var(--white);
-    padding: var(--small);
-}
-
 .menu {
     position: fixed;
     width: 100%;
@@ -96,8 +91,6 @@ header {
 }
 
 nav {
-    display: flex;
-    flex-direction: row;
     align-items: flex-start;
 }
 
@@ -107,6 +100,13 @@ nav {
     flex-direction: column;
 }
 
+/* CLASS FOR FLEX ROW */
+.fl-rw { 
+    display: flex;
+    flex-direction: row;
+}
+
+header, 
 article {
     gap: var(--xsmall);
     padding-inline: var(--xsmall);
@@ -128,8 +128,6 @@ section {
     justify-content: space-between;
     margin-block-end: var(--small);
 }
-
-footer {}
 
 /* CONTENT TYPE */
 h1 {
@@ -159,7 +157,6 @@ p {
     font-weight: 400;
     font-size: var(--body);
     line-height: 140%;
-    /* letter-spacing: -3%; */
     /* color: var(--dark-gray); */
 }
 
@@ -205,7 +202,6 @@ p {
 
 blockquote {
     width: 100%;
-    /* margin-block-start: 1rem; */
 }
 
 /* LINKS */
@@ -227,6 +223,7 @@ a:visited {
 
 a.purple,
 a.white {
+    display: flex;
     font-size: var(--footnote);
     padding-inline: 0.375rem;
     padding-block: 0.25rem;
@@ -275,25 +272,3 @@ a.purple:hover {
 .cell-2 { justify-self: end;}
 .cell-3 { justify-self: start;}
 .cell-4 { justify-self: start;}
-
-/* PREVIOS FLEX VERSION */
-/* .menu {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 0rem;
-}
-
-.btn-box,
-.line-1,
-.line-2 {
-    display: flex;
-}
-
-.line-1,
-.line-2 {
-    width: 100%;
-}
-
-.line-1 { justify-content: flex-end; }
-.line-2 { justify-content: flex-start; } */
