@@ -173,8 +173,9 @@ p {
     font-size: var(--callout);
     line-height: 100%;
     letter-spacing: -2%;
+    color: var(--white);
     text-decoration: underline;
-    text-decoration-color: var(--yellow);
+    text-decoration-color: var(--purple);
     text-decoration-thickness: 1.313rem;
     text-underline-offset: -1.15rem;
     text-decoration-skip-ink: none;
