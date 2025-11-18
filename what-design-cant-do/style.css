@@ -47,26 +47,44 @@
     scroll-behavior: smooth;
     color: var(--black);
 
-    /* VERIABLES */
-
+/* VERIABLES */
+    /* PRIMARY COLORS */
     --black: #0A0A0A;
     --white: #FAFAFA;
-    --gray: #747474;
     --dark-gray: #545454;
 
+    /* SECONDARY COLORS*/
     --purple: #5704EB;
-    --yellow: #D5FF9D
+    --yellow: #D5FF9D;
+    --gray: #747474;
+
+    /* FONT SIZE */
+    --display: 2.5rem;
+    --headline: 1.8rem;
+    --title: 1.25rem;
+    --callout: 1.5rem;
+    --body: 0.875rem;
+    --footnote: 0.75rem;
+
+    /* SPACING */
+    --null: 0rem;
+    --xsmall: 0.5rem;
+    --small: 1rem;
+    --medium: 1.25rem;
+    --large: 2rem;
+
+    --btn-border: 0.063rem;
 }
 
 /* CONTAINERS TYPE */
 body {
     background-color: var(--black);
-    padding: 0rem;
+    padding: var(--null);
 }
 
 header {
     background-color: var(--white);
-    padding: 1rem;
+    padding: var(--small);
 }
 
 .menu {
@@ -74,46 +92,41 @@ header {
     width: 100%;
     background-color: transparent;
     color: var(--black);
-    padding: 0.5rem;
+    padding: var(--xsmall);
 }
 
 nav {
     display: flex;
-    align-items: flex-start;
     flex-direction: row;
+    align-items: flex-start;
 }
 
-main {
+/* CLASS FOR FLEX COLUMN */
+.fl-cl { 
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
-    padding-inline: 0.5rem;
-    padding-block-start: 0.5rem;
 }
 
 article {
-    background-color: var(--white); /* THERE SHOULD BE ONLY 1 ARTICLE AND MORE SECTIONS. THATS CORRECT SEMANTICALLY */
-    padding: 1rem;
+    gap: var(--xsmall);
+    padding-inline: var(--xsmall);
+    padding-block-start: var(--xsmall);
 }
 
 section {
-    display: flex;
-    flex-direction: column;
-    gap: 2.5rem;
+    background-color: var(--white);
+    padding: var(--small);
+    gap: var(--large);
 }
 
-.title{
-    display: flex;
-    flex-direction: column;
-    gap: 1.25rem;
+.hero{
+    gap: var(--medium);
 }
 
 .source {
     width: 100%;
-    display: flex;
-    flex-direction: column;
     justify-content: space-between;
-    margin-block-end: 1rem;
+    margin-block-end: var(--small);
 }
 
 footer {}
@@ -122,7 +135,7 @@ footer {}
 h1 {
     font-family: "Roboto";
     font-weight: 600;
-    font-size: 2.5rem;
+    font-size: var(--display);
     line-height: 100%;
     letter-spacing: -2%;
     text-align: center;
@@ -136,7 +149,7 @@ h1 {
 h2 {
     font-family: "Roboto";
     font-weight: 600;
-    font-size: 1.8rem;
+    font-size: var(--headline);
     line-height: 100%;
     letter-spacing: -2%;
     width: 100%;
@@ -144,7 +157,7 @@ h2 {
 
 p {
     font-weight: 400;
-    font-size: 0.875rem; /* bulk size */
+    font-size: var(--body);
     line-height: 140%;
     /* letter-spacing: -3%; */
     /* color: var(--dark-gray); */
@@ -153,7 +166,7 @@ p {
 .subtitle {
     font-family: "Roboto";
     font-weight: 400;
-    font-size: 1.25rem;
+    font-size: var(--title);
     line-height: 110%;
     letter-spacing: -2%;
     text-align: center;
@@ -162,7 +175,7 @@ p {
 .quote {
     font-family: "Roboto";
     font-weight: 600;
-    font-size: 1.55rem;
+    font-size: var(--callout);
     line-height: 100%;
     letter-spacing: -2%;
     text-align: center;
@@ -187,13 +200,11 @@ p {
 
 .note {
     color: var(--gray);
-    font-size: 0.75rem; /* footnote size */
+    font-size: var(--footnote);
 }
 
 blockquote {
     width: 100%;
-    display: flex;
-    flex-direction: column;
     /* margin-block-start: 1rem; */
 }
 
@@ -216,8 +227,7 @@ a:visited {
 
 a.purple,
 a.white {
-    display: flex;
-    font-size: 0.75rem; /* footnote size */
+    font-size: var(--footnote);
     padding-inline: 0.375rem;
     padding-block: 0.25rem;
     text-decoration: none;
@@ -226,13 +236,13 @@ a.white {
 a.purple {
     background-color: var(--purple);
     color: var(--white);
-    border: 0.063rem solid var(--purple);
+    border: var(--btn-border) solid var(--purple);
 }
 
 a.white {
     background-color: var(--white);
     color: var(--black);
-    border: 0.063rem solid var(--white);
+    border: var(--btn-border) solid var(--white);
     
 }
 
@@ -240,7 +250,7 @@ a.white:hover,
 a.purple:hover {
     background-color: var(--black);
     color: var(--white);
-    border: 0.063rem solid var(--white);
+    border: var(--btn-border) solid var(--white);
 }
 
 .grid {
