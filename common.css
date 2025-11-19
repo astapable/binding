@@ -81,6 +81,7 @@
     --small: 1rem;
     --medium: 1.25rem;
     --large: 2rem;
+    --xlarge: 3rem;
 
     @media (width > 900px) {
         --null: 0rem;
@@ -88,6 +89,7 @@
         --small: 3.375rem; /* 54px */
         --medium: 2.5rem; /* 48px */
         --large: 3rem; /* 48px */
+        --xlarge: 6rem;
     }
 
     --btn-border: 0.063rem;

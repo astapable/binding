@@ -124,6 +124,10 @@ img {
 .heading { /* Text part of the Cover */
     justify-content: space-between;
     height: 100%;
+
+    @media (width > 900px) {
+        padding: var(--xlarge);
+    }
 }
 
 /* ==================== TEXT STYLING ==================== */
