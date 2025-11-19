@@ -66,7 +66,7 @@
     --body: 0.875rem;
     --footnote: 0.75rem;
 
-    @media (width > 900px) {
+    @media (width > 600px) {
         --display: 4.5rem; /* 72px */
         --headline: 3rem; /* 48px */
         --title: 1.75rem; /* 28px */
@@ -83,11 +83,20 @@
     --large: 2rem;
     --xlarge: 3rem;
 
-    @media (width > 900px) {
+    @media (width > 600px) {
+        --null: 0rem;
+        --xsmall: 1.25rem; /* 20px */
+        --small: 2rem; /* 32px */
+        --medium: 2.5rem; /* 40px */
+        --large: 3rem; /* 48px */
+        --xlarge: 5rem;
+    }
+
+        @media (width > 900px) {
         --null: 0rem;
         --xsmall: 1.25rem; /* 20px */
         --small: 3.375rem; /* 54px */
-        --medium: 2.5rem; /* 48px */
+        --medium: 2.5rem; /* 40px */
         --large: 3rem; /* 48px */
         --xlarge: 6rem;
     }
