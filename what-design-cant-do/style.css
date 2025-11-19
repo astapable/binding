@@ -1,80 +1,5 @@
-/* FONTS */
-@font-face {
-    font-family: "Roboto";
-    src: url("fonts/Roboto-SemiBold.woff") format('woff');
-    font-weight: 600;
-    font-style: normal;
-    font-display: swap;
-}
 
-@font-face {
-    font-family: "Roboto";
-    src: url("fonts/Roboto-Regular.woff") format('woff');
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
-}
 
-@font-face {
-    font-family: "Roboto_Mono";
-    src: url("fonts/RobotoMono-Regular.woff") format('woff');
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "Chava";
-    src: url("fonts/Chava-Regular.woff") format('woff');
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
-}
-
-@font-face {
-    font-family: "Geist";
-    src: url("fonts/Geist-Regular.woff") format('woff');
-    font-weight: 400;
-    font-style: normal;
-    font-display: swap;
-}
-
-:root {
-    --spacing: 1rem;
-	font-family: 'Geist';
-    font-weight: 400;
-	font-size: 120%;
-    scroll-behavior: smooth;
-    color: var(--black);
-
-/* VERIABLES */
-    /* PRIMARY COLORS */
-    --black: #0A0A0A;
-    --white: #FAFAFA;
-    --dark-gray: #545454;
-
-    /* SECONDARY COLORS*/
-    --purple: #5704EB;
-    --yellow: #D5FF9D;
-    --gray: #747474;
-
-    /* FONT SIZE */
-    --display: 2.5rem;
-    --headline: 1.8rem;
-    --title: 1.25rem;
-    --callout: 1.5rem;
-    --body: 0.875rem;
-    --footnote: 0.75rem;
-
-    /* SPACING */
-    --null: 0rem;
-    --xsmall: 0.5rem;
-    --small: 1rem;
-    --medium: 1.25rem;
-    --large: 2rem;
-
-    --btn-border: 0.063rem;
-}
 
 /* CONTAINERS TYPE */
 body {
@@ -84,6 +9,7 @@ body {
 
 .menu {
     position: fixed;
+    z-index: 10;
     width: 100%;
     background-color: transparent;
     color: var(--black);
@@ -106,24 +32,89 @@ nav {
     flex-direction: row;
 }
 
-header, 
+header,
 article {
     gap: var(--xsmall);
     padding-inline: var(--xsmall);
+}
+
+header {
     padding-block-start: var(--xsmall);
 }
 
+article {
+    padding-block-start: var(--xsmall);
+    
+    @media (width > 900px) {
+        padding-block-start: var(--null);
+    }
+}
+
 section {
+    width: 100%;
     background-color: var(--white);
     padding: var(--small);
     gap: var(--large);
+    align-items: center;
 }
 
 /* HERO SCREEN */
-.hero {
+
+/* MAIN VISUAL LAYOUT_START*/
+main {
     display: flex;
     flex-direction: column;
+
+    @media (width > 900px) {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        position: relative;
+    }
 }
+
+.hero {
+    display: flex;
+    width: 100%;
+
+    @media (width > 900px) {
+        height: 100svh;
+        padding-block-end: var(--xsmall);
+    }
+}
+
+figure {
+    display: block;
+    width: 100%;
+
+    @media (width > 900px) {
+        width: 50%;
+        position: sticky;
+        top: var(--null);
+        align-items: flex-end; /* sticky to the <main> top */
+        padding-inline-start: var(--xsmall);
+        padding-block: var(--xsmall);
+        height: 100svh;
+    }
+}
+
+img {
+    display: block;
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    object-position: bottom center; /* doubleck this one */
+
+}
+
+.article-body {
+    width: 100%; /* scrollable part of  desktop */
+
+    @media (width > 900px) {
+        width: 50%;
+    }
+}
+/* MAIN VISUAL LAYOUT_END*/
 
 .display{
     gap: var(--medium);
@@ -131,8 +122,11 @@ section {
 
 .source {
     width: 100%;
+}
+
+.heading {
     justify-content: space-between;
-    margin-block-end: var(--small);
+    height: 100%;
 }
 
 /* CONTENT TYPE */
@@ -171,6 +165,17 @@ p {
     font-size: var(--title);
     line-height: 110%;
     letter-spacing: -2%;
+
+    @media (width > 900px) {
+        line-height: 120%;
+    }
+}
+
+/* CITATION_STARTS */
+blockquote {
+    width: 100%;
+    align-items: center;
+    text-wrap: balance;
 }
 
 .quote {
@@ -184,7 +189,15 @@ p {
     text-decoration-thickness: 1.313rem;
     text-underline-offset: -1.15rem;
     text-decoration-skip-ink: none;
+
+    @media (width > 900px) {
+        width: 80%;
+        line-height: 105%;
+        text-decoration-thickness: 2.05rem;
+        text-underline-offset: -1.7rem;
+    }
 }
+/* CITATION_END */
 
 .align-left {
     text-align: left;
@@ -201,10 +214,6 @@ p {
 .note {
     color: var(--gray);
     font-size: var(--footnote);
-}
-
-blockquote {
-    width: 100%;
 }
 
 /* LINKS */
@@ -231,6 +240,11 @@ a.white {
     padding-inline: 0.375rem;
     padding-block: 0.25rem;
     text-decoration: none;
+
+    @media (width > 900px) {
+        padding-inline: 0.5rem;
+        padding-block: 0.35rem;
+    }
 }
 
 a.purple {
@@ -243,7 +257,6 @@ a.white {
     background-color: var(--white);
     color: var(--black);
     border: var(--btn-border) solid var(--white);
-    
 }
 
 a.white:hover,

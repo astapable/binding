@@ -1,4 +1,4 @@
-/* FONTS */
+
 
 
 /* CONTAINERS TYPE */
@@ -9,6 +9,7 @@ body {
 
 .menu {
     position: fixed;
+    z-index: 10;
     width: 100%;
     background-color: transparent;
     color: var(--black);
@@ -31,27 +32,101 @@ nav {
     flex-direction: row;
 }
 
-header, 
+header,
 article {
     gap: var(--xsmall);
     padding-inline: var(--xsmall);
+}
+
+header {
     padding-block-start: var(--xsmall);
 }
 
+article {
+    padding-block-start: var(--xsmall);
+    
+    @media (width > 900px) {
+        padding-block-start: var(--null);
+    }
+}
+
 section {
+    width: 100%;
     background-color: var(--white);
     padding: var(--small);
     gap: var(--large);
+    align-items: center;
 }
 
-.hero{
+/* HERO SCREEN */
+
+/* MAIN VISUAL LAYOUT_START*/
+main {
+    display: flex;
+    flex-direction: column;
+
+    @media (width > 900px) {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        position: relative;
+    }
+}
+
+.hero {
+    display: flex;
+    width: 100%;
+
+    @media (width > 900px) {
+        height: 100svh;
+        padding-block-end: var(--xsmall);
+    }
+}
+
+figure {
+    display: block;
+    width: 100%;
+
+    @media (width > 900px) {
+        width: 50%;
+        position: sticky;
+        top: var(--null);
+        align-items: flex-end; /* sticky to the <main> top */
+        padding-inline-start: var(--xsmall);
+        padding-block: var(--xsmall);
+        height: 100svh;
+    }
+}
+
+img {
+    display: block;
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    object-position: bottom center; /* doubleck this one */
+
+}
+
+.article-body {
+    width: 100%; /* scrollable part of  desktop */
+
+    @media (width > 900px) {
+        width: 50%;
+    }
+}
+/* MAIN VISUAL LAYOUT_END*/
+
+.display{
     gap: var(--medium);
 }
 
 .source {
     width: 100%;
+}
+
+.heading {
     justify-content: space-between;
-    margin-block-end: var(--small);
+    height: 100%;
 }
 
 /* CONTENT TYPE */
@@ -90,6 +165,17 @@ p {
     font-size: var(--title);
     line-height: 110%;
     letter-spacing: -2%;
+
+    @media (width > 900px) {
+        line-height: 120%;
+    }
+}
+
+/* CITATION_STARTS */
+blockquote {
+    width: 100%;
+    align-items: center;
+    text-wrap: balance;
 }
 
 .quote {
@@ -98,13 +184,20 @@ p {
     font-size: var(--callout);
     line-height: 100%;
     letter-spacing: -2%;
-    color: var(--white); /* ART3 UNIQUE */
     text-decoration: underline;
-    text-decoration-color: var(--purple); /* ART3 UNIQUE */
+    text-decoration-color: var(--yellow);
     text-decoration-thickness: 1.313rem;
     text-underline-offset: -1.15rem;
     text-decoration-skip-ink: none;
+
+    @media (width > 900px) {
+        width: 80%;
+        line-height: 105%;
+        text-decoration-thickness: 2.05rem;
+        text-underline-offset: -1.7rem;
+    }
 }
+/* CITATION_END */
 
 .align-left {
     text-align: left;
@@ -121,10 +214,6 @@ p {
 .note {
     color: var(--gray);
     font-size: var(--footnote);
-}
-
-blockquote {
-    width: 100%;
 }
 
 /* LINKS */
@@ -151,6 +240,11 @@ a.white {
     padding-inline: 0.375rem;
     padding-block: 0.25rem;
     text-decoration: none;
+
+    @media (width > 900px) {
+        padding-inline: 0.5rem;
+        padding-block: 0.35rem;
+    }
 }
 
 a.purple {
@@ -163,7 +257,6 @@ a.white {
     background-color: var(--white);
     color: var(--black);
     border: var(--btn-border) solid var(--white);
-    
 }
 
 a.white:hover,

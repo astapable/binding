@@ -1,29 +1,94 @@
-*, *::before, *::after {
-    box-sizing: border-box;
+/* FONTS */
+@font-face {
+    font-family: "Roboto";
+    src: url("fonts/Roboto-SemiBold.woff") format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url("fonts/Roboto-Regular.woff") format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Roboto_Mono";
+    src: url("fonts/RobotoMono-Regular.woff") format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Chava";
+    src: url("fonts/Chava-Regular.woff") format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Geist";
+    src: url("fonts/Geist-Regular.woff") format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
 }
 
 :root {
-
     --spacing: 1rem;
-	font-size: 125%;
+	font-family: 'Geist';
+    font-weight: 400;
+	font-size: 120%;
     scroll-behavior: smooth;
+    color: var(--black);
 
-    
-    /* neutral base */
-    --off-white: #fafafa; 
-    --charcoal: #2d2d2d;
-    --neutral-grey: #898989;
-}
+/* VERIABLES */
+    /* PRIMARY COLORS */
+    --black: #0A0A0A;
+    --white: #FAFAFA;
+    --dark-gray: #545454;
 
-body {
-    padding: 2.5rem;
-    background-color: var(--off-white);
-}
+    /* SECONDARY COLORS*/
+    --purple: #5704EB;
+    --yellow: #D5FF9D;
+    --gray: #747474;
 
-a:link {  
-    text-decoration: underline;
-}
+    /* FONT SIZE */
+    --display: 2.5rem;
+    --headline: 1.8rem;
+    --title: 1.25rem;
+    --callout: 1.5rem;
+    --body: 0.875rem;
+    --footnote: 0.75rem;
 
-a:hover {
-    color: var(--neutral-grey);
+    @media (width > 900px) {
+        --display: 4rem; /* 64px */
+        --headline: 3rem; /* 48px */
+        --title: 1.75rem; /* 28px */
+        --callout: 2.5rem; /* 40px */
+        --body: 1.125rem; /* 18px */
+        --footnote: 1.125rem /* 14px */
+    }
+
+    /* SPACING */
+    --null: 0rem;
+    --xsmall: 0.5rem;
+    --small: 1rem;
+    --medium: 1.25rem;
+    --large: 2rem;
+
+    @media (width > 900px) {
+        --null: 0rem;
+        --xsmall: 1.25rem; /* 20px */
+        --small: 3.375rem; /* 54px */
+        --medium: 2.5rem; /* 48px */
+        --large: 3rem; /* 48px */
+    }
+
+    --btn-border: 0.063rem;
 }
