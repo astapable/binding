@@ -1,12 +1,9 @@
-
-
-
-/* CONTAINERS TYPE */
 body {
     background-color: var(--black);
     padding: var(--null);
 }
 
+/* ==================== HEADER CONTAINERS ==================== */
 .menu {
     position: fixed;
     z-index: 10;
@@ -20,18 +17,22 @@ nav {
     align-items: flex-start;
 }
 
-/* CLASS FOR FLEX COLUMN */
-.fl-cl { 
-    display: flex;
-    flex-direction: column;
+/* ==================== HEADER GRID SYSTEM ==================== */
+.grid {
+    display: grid;
+    grid-template-columns: max-content 1fr; /* First column widht always adjust to its content*/
+    grid-template-rows: repeat(4, auto); /* 4 rows */
+    justify-items: start; /* base setup */
+    align-items: start; /* base setup */
+    width: 100%;
 }
 
-/* CLASS FOR FLEX ROW */
-.fl-rw { 
-    display: flex;
-    flex-direction: row;
-}
+.cell-1 { grid-column: 1; grid-row: 1; justify-self: start; }
+.cell-2 { grid-column: 2; grid-row: 1; justify-self: end;   }
+.cell-3 { grid-column: 1; grid-row: 2; justify-self: start; }
+.cell-4 { grid-column: 2; grid-row: 2; justify-self: start; }
 
+/* ==================== GENERIC CONTAINERS ==================== */
 header,
 article {
     gap: var(--xsmall);
@@ -58,9 +59,7 @@ section {
     align-items: center;
 }
 
-/* HERO SCREEN */
-
-/* MAIN VISUAL LAYOUT_START*/
+/* ==================== MAIN COLUMNS VISUAL SETUP ==================== */
 main {
     display: flex;
     flex-direction: column;
@@ -70,16 +69,6 @@ main {
         flex-direction: row;
         align-items: flex-start;
         position: relative;
-    }
-}
-
-.hero {
-    display: flex;
-    width: 100%;
-
-    @media (width > 900px) {
-        height: 100svh;
-        padding-block-end: var(--xsmall);
     }
 }
 
@@ -98,49 +87,52 @@ figure {
     }
 }
 
+.article-body {
+    width: 100%; /* scrollable part of  desktop */
+    
+    @media (width > 900px) {
+        width: 50%;
+    }
+}
+
 img {
     display: block;
     height: 100%;
     width: 100%;
     object-fit: contain;
-    object-position: bottom center; /* doubleck this one */
-
+    object-position: bottom center;
 }
 
-.article-body {
-    width: 100%; /* scrollable part of  desktop */
+.hero {
+    display: flex;
+    width: 100%;
 
     @media (width > 900px) {
-        width: 50%;
+        height: 100svh;
+        padding-block-end: var(--xsmall);
     }
 }
-/* MAIN VISUAL LAYOUT_END*/
 
-.display{
+.display{ /* Article title and subtitle wrapper */
     gap: var(--medium);
 }
 
-.source {
+.source { /* Author and year */
     width: 100%;
 }
 
-.heading {
+.heading { /* Text part of the Cover */
     justify-content: space-between;
     height: 100%;
 }
 
-/* CONTENT TYPE */
+/* ==================== TEXT STYLING ==================== */
 h1 {
     font-family: "Roboto";
     font-weight: 600;
     font-size: var(--display);
     line-height: 100%;
     letter-spacing: -2%;
-}
-
-.marker {
-    font-family: "Chava";
-    font-weight: 400;
 }
 
 h2 {
@@ -159,7 +151,17 @@ p {
     /* color: var(--dark-gray); */
 }
 
-.subtitle {
+.marker { /* Pixel Style for any font */
+    font-family: "Chava";
+    font-weight: 400;
+}
+
+.note { /* Smaller Text Element */
+    color: var(--gray);
+    font-size: var(--footnote);
+}
+
+.subtitle { /* Bold Support Text */
     font-family: "Roboto";
     font-weight: 400;
     font-size: var(--title);
@@ -171,7 +173,7 @@ p {
     }
 }
 
-/* CITATION_STARTS */
+/* ==================== CITATION ==================== */
 blockquote {
     width: 100%;
     align-items: center;
@@ -197,94 +199,64 @@ blockquote {
         text-underline-offset: -1.7rem;
     }
 }
-/* CITATION_END */
 
-.align-left {
-    text-align: left;
-}
-
-.align-right {
-    text-align: right;
-}
-
-.align-center, .note {
-    text-align: center;
-}
-
-.note {
-    color: var(--gray);
-    font-size: var(--footnote);
-}
-
-/* LINKS */
-a:link {  
+/* ==================== LINKS AND BUTTONS ==================== */
+a {
     color: var(--black);
     text-decoration: underline;
     text-decoration-color: var(--purple);
     text-decoration-thickness: 0.125rem;
-}
 
-a:hover {
-    color: var(--purple);
-    text-decoration-color: var(--purple);
-}
+    &:hover {
+        color: var(--purple);
+        text-decoration-color: var(--purple);
+    }
 
-a:visited {
-    text-decoration-color: var(--gray);
-}
+    &.purple,
+    &.white {
+        display: flex;
+        font-size: var(--footnote);
+        padding-inline: 0.375rem;
+        padding-block: 0.25rem;
+        text-decoration: none;
 
-a.purple,
-a.white {
-    display: flex;
-    font-size: var(--footnote);
-    padding-inline: 0.375rem;
-    padding-block: 0.25rem;
-    text-decoration: none;
+        @media (width > 900px) {
+            padding-inline: 0.5rem;
+            padding-block: 0.35rem;
+        }
+    }
 
-    @media (width > 900px) {
-        padding-inline: 0.5rem;
-        padding-block: 0.35rem;
+    &.purple {
+        background-color: var(--purple);
+        color: var(--white);
+        border: var(--btn-border) solid var(--purple);
+    }
+
+    &.white {
+        background-color: var(--white);
+        color: var(--black);
+        border: var(--btn-border) solid var(--white);
+    }
+
+    &.white:hover,
+    &.purple:hover {
+        background-color: var(--black);
+        color: var(--white);
+        border: var(--btn-border) solid var(--white);
     }
 }
 
-a.purple {
-    background-color: var(--purple);
-    color: var(--white);
-    border: var(--btn-border) solid var(--purple);
+/* ==================== UTILITIES ==================== */
+.fl-cl { 
+    display: flex;
+    flex-direction: column;
 }
 
-a.white {
-    background-color: var(--white);
-    color: var(--black);
-    border: var(--btn-border) solid var(--white);
+.fl-rw { 
+    display: flex;
+    flex-direction: row;
 }
 
-a.white:hover,
-a.purple:hover {
-    background-color: var(--black);
-    color: var(--white);
-    border: var(--btn-border) solid var(--white);
-}
-
-.grid {
-    display: grid;
-    grid-template-columns: max-content 1fr; /* First column widht always adjust to its content*/
-    grid-template-rows: repeat(4, auto); /* 4 rows */
-    width: 100%;
-    justify-items: start; /* base setup */
-    align-items: start; /* base setup */
-}
-
-
-/* Cell positioning */
-.cell-1 { grid-column: 1; grid-row: 1; }
-.cell-2 { grid-column: 2; grid-row: 1; }
-.cell-3 { grid-column: 1; grid-row: 2; }
-.cell-4 { grid-column: 2; grid-row: 2; }
-
-
-/* Cell alignment */
-.cell-1 { justify-self: start; }
-.cell-2 { justify-self: end;}
-.cell-3 { justify-self: start;}
-.cell-4 { justify-self: start;}
+.align-left { text-align: left; }
+.align-right { text-align: right; }
+.align-center { text-align: center; }

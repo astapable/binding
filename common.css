@@ -1,4 +1,4 @@
-/* FONTS */
+/* ==================== FORTS ==================== */
 @font-face {
     font-family: "Roboto";
     src: url("fonts/Roboto-SemiBold.woff") format('woff');
@@ -47,7 +47,7 @@
     scroll-behavior: smooth;
     color: var(--black);
 
-/* VERIABLES */
+/* ==================== VARIABLES ==================== */
     /* PRIMARY COLORS */
     --black: #0A0A0A;
     --white: #FAFAFA;
@@ -67,7 +67,7 @@
     --footnote: 0.75rem;
 
     @media (width > 900px) {
-        --display: 4rem; /* 64px */
+        --display: 4.5rem; /* 72px */
         --headline: 3rem; /* 48px */
         --title: 1.75rem; /* 28px */
         --callout: 2.5rem; /* 40px */
