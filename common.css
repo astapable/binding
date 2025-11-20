@@ -183,13 +183,15 @@ main {
 figure {
     display: block;
     width: 100%;
+    padding-block-start: var(--xsmall);
+    padding-inline: var(--xsmall);
 
     @media (width > 900px) {
         width: 50%;
         position: sticky;
         top: var(--null);
-        padding-inline-start: var(--xsmall);
-        padding-block: var(--xsmall);
+        padding-inline-end: var(--null);
+        padding-block-end: var(--xsmall);
         height: 100svh;
     }
 }
