@@ -5,17 +5,10 @@ figure {
     width: 100%;
 
     @media (width > 900px) {
-        width: 100%;
-        top: none;
-        align-items: flex-end;
+        position: static; 
         padding-inline-start: var(--null);
         padding-block: var(--null);
-        height: 100svh;
     }
-}
-
-img {
-    width: 100%;
 }
 
 .hero {
@@ -23,12 +16,8 @@ img {
     flex-direction: row;
     width: 100%;
     height: 100svh;
-    align-items: end;
+    align-items: flex-end;
     padding-block: var(--xsmall);
-
-    @media (width > 900px) {
-        height: 100svh;
-    }
 }
 
 /* ==================== HEADER GRID SYSTEM ==================== */
@@ -54,6 +43,6 @@ img {
     display: none;
 
     @media (width > 900px) {
-        display: block; 
+        display: initial; 
     }
 }

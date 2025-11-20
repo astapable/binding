@@ -176,10 +176,7 @@ main {
     flex-direction: column;
 
     @media (width > 900px) {
-        display: flex;
         flex-direction: row;
-        align-items: flex-start;
-        position: relative;
     }
 }
 
@@ -191,7 +188,6 @@ figure {
         width: 50%;
         position: sticky;
         top: var(--null);
-        align-items: flex-end; /* sticky to the <main> top */
         padding-inline-start: var(--xsmall);
         padding-block: var(--xsmall);
         height: 100svh;
