@@ -1,4 +1,13 @@
 
+.hero {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100svh;
+    align-items: flex-end;
+    padding-block: var(--xsmall);
+}
+
 figure {
     display: flex;
     flex-direction: column;
@@ -9,15 +18,6 @@ figure {
         padding-inline-start: var(--null);
         padding-block: var(--null);
     }
-}
-
-.hero {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    height: 100svh;
-    align-items: flex-end;
-    padding-block: var(--xsmall);
 }
 
 /* ==================== HEADER GRID SYSTEM ==================== */
