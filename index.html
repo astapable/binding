@@ -6,29 +6,26 @@
 		<style>
 			@import 'reset.css' layer(reset);
 			@import 'common.css' layer(common);
+			@import 'style.css' layer(page);
 		</style>
 	</head>
 	<body>
-        <header></header>
-        <main>
-			<h1>Large Project Name</h1>
+        <header class="menu">
 			<nav>
-				<ol>
-					<!-- Text 1 Original Article - https://networkcultures.org/entreprecariat/what-design-cant-do/ -->
-					<li><a href="direction-1/index.html">Direction 1</a></li> 
-					<!-- Text 2 Original Article - https://www.nytimes.com/2016/01/17/magazine/against-neutrality.html?rref=collection%2Fbyline%2Fteju-cole&action=click&contentCollection=undefined&region=stream&module=stream_unit&version=latest&contentPlacement=7&pgtype=collection -->
-					<li><a href="direction-2/index.html">Direction 2</a></li>
-					<!-- Text 3 Original Article - https://modesofcriticism.org/fuck-all/ -->
-					<li><a href="direction-3/index.html">Direction 3</a></li>
-					<!-- Text 3 Original Article - https://modesofcriticism.org/fuck-all/ -->
-					<li><a href="what-design-cant-do/">What Design Can't Do</a></li>
-					<!-- Text 3 Original Article - https://modesofcriticism.org/fuck-all/ -->
-					<li><a href="against-neutrality/">Against Neutrality</a></li>
-					<!-- Text 3 Original Article - https://modesofcriticism.org/fuck-all/ -->
-					<li><a href="fuck-all/">Fuck All</a></li>
-					
+				<ol class="grid">
+					<li class="cell-1"><a class="purple" href="../index.html">_F/ckts Anthology</a></li>
+					<li class="cell-2"><a class="white" href="what-design-cant-do/">F/ckts_001<span class="hide"> // What Design Can't Do</span></a></li>
+					<li class="cell-3"><a class="white" href="against-neutrality/">F/ckts_002<span class="hide"> // Against Neutrality</span></a></li>
+					<li class="cell-4"><a class="white" href="fuck-all/">F/ckts_003<span class="hide"> // Fuck All</span></a></li>
 				</ol>
 			</nav>
+        </header>
+        <main>
+			<header class="hero">
+				<figure>
+					<img src="/img/full.svg" alt="Nice ALT text will be added lated">
+				</figure>
+			</header>
         </main>
         <footer></footer>
     </body>
