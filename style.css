@@ -1,4 +1,3 @@
-
 .hero {
     display: flex;
     flex-direction: row;
@@ -6,20 +5,21 @@
     height: 100svh;
     align-items: flex-end;
     padding-block: var(--xsmall);
+    position: relative;
 }
 
 figure {
     display: flex;
     flex-direction: column;
     width: 100%;
-    padding: var(--null);
+    padding: var(--null); /* No paddinga for heropage */
 
     @media (width > 900px) {
-        position: static; 
+        position: static; /* Make it static */
     }
 }
 
-/* ==================== HEADER GRID SYSTEM ==================== */
+/* ==================== HERO HEADER GRID SYSTEM ==================== */
 .grid {
     display: grid;
     grid-template-columns: max-content max-content 1fr;
@@ -45,7 +45,25 @@ figure {
 .hide {
     display: none;
 
-        @media (width > 800px) {
+    @media (width > 800px) {
         display: initial; 
     }
+}
+
+.colophon {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    padding-block-start: var(--xsmall);
+    padding-inline-end: var(--xsmall);
+    position: absolute;
+    background-color: var(--black);
+    z-index: 1;
+}
+
+h1, p {
+    font-weight: 400;
+    font-size: var(--body);
+    line-height: 140%;
+    color: var(--white);
 }
