@@ -158,7 +158,7 @@ article {
     padding-block-start: var(--xsmall);
     
     @media (width > 900px) {
-        padding-block-start: var(--null);
+        padding-block-start: var(--xsmall);
     }
 }
 
