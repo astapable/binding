@@ -198,11 +198,17 @@ figure {
 
 .article-body {
     width: 100%; /* scrollable part of  desktop */
+    /*  overflow-wrap: break-word; ITs somethibg I need to check */
+
     
     @media (width > 900px) {
         width: 50%;
     }
 }
+
+/* .article-body * {
+    max-width: 100%; ITs somethibg I need to check
+}  */
 
 img {
     display: block;
@@ -264,7 +270,6 @@ p {
     font-weight: 400;
     font-size: var(--body);
     line-height: 140%;
-    /* color: var(--dark-gray); */
 }
 
 .marker { /* Pixel Style for any font */
