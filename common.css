@@ -117,6 +117,7 @@ body {
     background-color: transparent;
     color: var(--black);
     padding: var(--xsmall);
+    gap: var(--xsmall);
 }
 
 nav {
@@ -134,7 +135,7 @@ nav {
     width: 100%;
 
     @media (width > 900px) {
-        width: 50%;
+        width: 100%;
     }
 }
 
@@ -147,19 +148,17 @@ nav {
 header,
 article {
     gap: var(--xsmall);
-    padding-inline: var(--xsmall);
 }
 
 header {
-    padding-block-start: var(--xsmall);
+    padding-block: var(--null);
+
+    @media (width > 900px) {
+        padding-block: var(--xsmall);
+    }
 }
 
 article {
-    padding-block-start: var(--xsmall);
-    
-    @media (width > 900px) {
-        padding-block-start: var(--xsmall);
-    }
 }
 
 section {
@@ -174,6 +173,8 @@ section {
 main {
     display: flex;
     flex-direction: column;
+    padding-inline: var(--xsmall);
+    gap: var(--xsmall);
 
     @media (width > 900px) {
         flex-direction: row;
@@ -183,15 +184,14 @@ main {
 figure {
     display: block;
     width: 100%;
-    padding-block-start: var(--xsmall);
-    padding-inline: var(--xsmall);
+    padding-block: var(--null);
 
     @media (width > 900px) {
         width: 50%;
         position: sticky;
         top: var(--null);
+        padding-block: var(--xsmall);
         padding-inline-end: var(--null);
-        padding-block-end: var(--xsmall);
         height: 100svh;
     }
 }
@@ -205,10 +205,6 @@ figure {
         width: 50%;
     }
 }
-
-/* .article-body * {
-    max-width: 100%; ITs somethibg I need to check
-}  */
 
 img {
     display: block;
