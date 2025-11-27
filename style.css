@@ -161,11 +161,6 @@ img {
     background-color: none;
     margin-inline-start: 22%;
 }
-button {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-}
 
 .article-link {
     display: flex;
@@ -177,9 +172,18 @@ button {
 
 .article-card {
     width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: var(--xsmall);
+    padding: 0.625rem;
 }
+
+.article-card svg {
+    height: 100%; 
+    width: auto;
+    flex-shrink: 0;
+    display: block;
+}
+
