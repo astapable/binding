@@ -6,6 +6,7 @@
     align-items: flex-end;
     padding-block: var(--xsmall);
     position: relative;
+    background-color: aqua;
 }
 
 figure {
@@ -66,4 +67,119 @@ h1, p {
     font-size: var(--body);
     line-height: 140%;
     color: var(--white);
+}
+
+
+
+
+
+
+
+
+article {
+    /* background-color: aqua; */
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100svh;
+    align-items: flex-end;
+    padding-block: var(--xsmall);
+    gap: var(--xsmall);
+}
+
+.home-1 {
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+    padding: 0rem;
+    gap: 0rem;
+
+    @media (width > 900px) {
+        width: 44%;
+    }
+
+    @media (width > 1200px) {
+        width: 34%;
+    }
+}
+
+.home-2 {
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+    padding: 0rem;
+    gap: 0rem;
+
+    @media (width > 900px) {
+        width: 56%;
+    }
+
+    @media (width > 1200px) {
+        width: 66%;
+    }
+}
+
+.book-btn {
+    display: grid;
+    gap: 0.625rem;
+    width: 100%;
+}
+
+.book-1 {
+    background-color: #1FE333;
+    height: 14svh;
+    margin-inline-start: 22%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch; 
+}
+
+.book-2 {
+    background-color: #FF8000;
+    height: 10svh;
+    padding: var(--xsmall);
+    margin-inline-end: 14%;
+}
+
+.book-3 {
+    display: flex;
+    flex-direction: row;
+    background-color: #5704EB;
+    height: 18svh;
+    padding: var(--xsmall);
+    margin-inline-start: 8%;
+    margin-inline-end: 5%;
+}
+
+img {
+    width: 100%;
+}
+
+.book-0 {
+    display: flex;
+    flex-direction: row;
+    background-color: none;
+    margin-inline-start: 22%;
+}
+button {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.article-link {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+}
+
+.article-card {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: var(--xsmall);
 }
