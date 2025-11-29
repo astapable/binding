@@ -1,23 +1,9 @@
 .hero {
     display: flex;
-    flex-direction: row;
     width: 100%;
     height: 100svh;
     align-items: flex-end;
     padding-block: var(--xsmall);
-    position: relative;
-    background-color: aqua;
-}
-
-figure {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    padding: var(--null); /* No paddinga for heropage */
-
-    @media (width > 900px) {
-        position: static; /* Make it static */
-    }
 }
 
 /* ==================== HERO HEADER GRID SYSTEM ==================== */
@@ -51,116 +37,127 @@ figure {
     }
 }
 
-.colophon {
+article {
     display: flex;
     flex-direction: column;
-    width: 60%;
-    padding-block-start: var(--xsmall);
-    padding-inline-end: var(--xsmall);
-    position: absolute;
-    background-color: var(--black);
-    z-index: 1;
-}
-
-h1, p {
-    font-weight: 400;
-    font-size: var(--body);
-    line-height: 140%;
-    color: var(--white);
-}
-
-
-
-
-
-
-
-
-article {
-    /* background-color: aqua; */
-    display: flex;
-    flex-direction: row;
     width: 100%;
     height: 100svh;
     align-items: flex-end;
     padding-block: var(--xsmall);
+    gap: 0.625rem;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 50svh;
+    padding: 0rem;
+    gap: var(--null);
+    align-items: flex-end;
+    background-color: transparent;
+
+    @media (width > 900px) {
+        gap: var(--xsmall);
+        flex-direction: row;
+    }
+}
+
+.colophon h1, 
+.colophon p {
+    font-weight: 400;
+    font-size: var(--footnote);
+    line-height: 140%;
+    color: var(--white);
+    margin-block-end: -0.3rem;
+}
+
+.colophon {
+    display: flex;
+    flex-direction: column;
     gap: var(--xsmall);
 }
 
-.home-1 {
+.left, .right {
     display: flex;
     flex-direction: column;
-    background-color: transparent;
-    padding: 0rem;
-    gap: 0rem;
-
+    
     @media (width > 900px) {
-        width: 44%;
+        flex-direction: row;
     }
 
-    @media (width > 1200px) {
-        width: 34%;
+}
+
+.left {
+    width: 100%;
+
+    @media (width > 900px) {
+        width: 30%;
+    }
+
+}
+
+.right {
+    width: 100%;
+    height: 100%;
+
+    @media (width > 900px) {
+        width: 70%;
     }
 }
 
-.home-2 {
-    display: flex;
-    flex-direction: column;
-    background-color: transparent;
-    padding: 0rem;
-    gap: 0rem;
-
-    @media (width > 900px) {
-        width: 56%;
-    }
-
-    @media (width > 1200px) {
-        width: 66%;
-    }
+.right .picture {
+    align-items: flex-end;
 }
 
-.book-btn {
+picture {
+    display: flex;
+    flex-direction: column;
+    margin-inline-start: 18%;
+    height: 100%;
+    align-items: flex-end;
+}
+
+.cta {
     display: grid;
     gap: 0.625rem;
     width: 100%;
+    height: 100%;  
 }
 
-.book-1 {
-    background-color: #1FE333;
-    height: 14svh;
-    margin-inline-start: 22%;
+.cta li {
     display: flex;
     flex-direction: column;
-    align-items: stretch; 
+    align-items: stretch;
 }
 
-.book-2 {
+.cta li:nth-child(1) {
+    background-color: #1FE333;
+    margin-inline-start: 18%;
+}
+
+.cta li:nth-child(2) {
     background-color: #FF8000;
-    height: 10svh;
-    padding: var(--xsmall);
     margin-inline-end: 14%;
 }
 
-.book-3 {
-    display: flex;
-    flex-direction: row;
+.cta li:nth-child(3) {
     background-color: #5704EB;
-    height: 18svh;
-    padding: var(--xsmall);
     margin-inline-start: 8%;
     margin-inline-end: 5%;
 }
 
-img {
-    width: 100%;
+.name-1,
+.name-2,
+.name-3 {
+    line-height: 100%;
+    color: var(--black);
+    margin-inline-end: 1rem;
 }
 
-.book-0 {
-    display: flex;
-    flex-direction: row;
-    background-color: none;
-    margin-inline-start: 22%;
-}
+.name-1 { font-size: clamp(1.5rem, 4vw, 3rem); }
+.name-2 { font-size: clamp(1.5rem, 4vw, 4rem); }
+.name-3 { font-size: clamp(1.5rem, 6vw, 6rem); }
 
 .article-link {
     display: flex;
@@ -174,10 +171,9 @@ img {
     width: 100%;
     height: 100%;
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 0.625rem;
+    padding: clamp(0.5rem, 2vw, 1rem); /* ATTENTION */
 }
 
 .article-card svg {
@@ -187,3 +183,20 @@ img {
     display: block;
 }
 
+.article-card svg .arrow {
+    transform-origin: center;
+    transition: transform 0.2s ease;
+}
+
+.article-link:hover svg .arrow {
+    transform: rotate(45deg);
+}
+
+.left a.white {
+    display: none;
+
+    @media (width > 900px) {
+        display: initial;
+        width: fit-content
+    }
+}
