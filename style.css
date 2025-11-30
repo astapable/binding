@@ -37,15 +37,14 @@ main {
     gap: var(--xsmall);
 }
 
-
-article{
+article {
     display: flex;
     flex-direction: column;
     width: 100%;
     height: 100svh;
     gap: 0.625rem;
     padding-block: var(--xsmall);
-    padding-block-start: 6rem;
+    padding-block-start: 5rem;
 
     @media (width > 600px) {
         display: flex;
@@ -58,27 +57,30 @@ article{
         display: flex;
         flex-direction: row;
         align-items: flex-end;
-        padding-block-start: 8rem;
+        padding-block-start: 7rem;
+    }
 
     @media (width > 1200px) {
         display: flex;
         flex-direction: row;
         align-items: flex-end;
-        padding-block-start: 8rem;
-    }
+        padding-block-start: 7rem;
     }
 }
 
 section {
     display: flex;
     flex-direction: column;
-    width: 100%;
-    height: 100%;  
+    width: 100%; 
     padding: 0rem;
     gap: var(--null);
     justify-content: space-between;
     align-items: flex-start;
     background-color: transparent;
+
+    @media (width > 900px) {
+        height: 100%;
+    }
 }
 
 .intro {
@@ -101,7 +103,6 @@ section {
     display: flex;
     align-items: flex-end;
     width: 100%;
-    padding-inline-end: var(--large);
 
     @media (width > 900px) {
         width: 28%;
@@ -160,7 +161,6 @@ section {
     margin-inline-start: -0.17em;
     margin-block-end: -0.02em;
     display: inline-flex;
-    /* display: none; */
 
     @media (width > 900px) {
         font-size: clamp(2.5rem, calc(1rem + 6vw), 7rem);
@@ -221,6 +221,124 @@ section {
 /* ==================== BOOK BUTTONS ==================== */
 .cta {
     display: grid;
+    gap: 0.625rem;
+    width: 100%;
+    height: 100%;  
+    
+    @media (width > 900px) {
+        display: grid;
+        grid-auto-flow: column;
+        width: max-content;
+        height: 100%; 
+        gap: var(--small);
+    }
+    @media (width > 1000px) {
+        display: grid;
+        grid-auto-flow: column;
+        width: max-content;
+        height: 100%; 
+        gap: var(--medium);
+    }
+}
+
+.cta li {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    padding: var(--xsmall);
+
+    @media (width > 900px) {
+        writing-mode: vertical-rl;
+        text-orientation: mixed;
+        display: flex;
+        justify-content: flex-end;
+        transition: transform 0.55s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+}
+
+.cta li:nth-child(1) {
+    background-color: var(--green);
+    margin-inline-start: 0%;
+    margin-inline-end: 0%;
+
+    @media (width > 900px) {
+        transform: rotate(180deg) rotate(17deg);
+        margin-inline-start: 18%;
+        margin-inline-end: 0%;
+    }
+}
+
+.cta li:nth-child(2) {
+    background-color: #FF8000;
+    margin-inline-start: 0%;
+    margin-inline-end: 0%;
+
+    @media (width > 900px) {
+        transform: rotate(180deg) rotate(11deg);
+        margin-inline-start: 14%;
+        margin-inline-end: 0%;
+    }
+}
+
+.cta li:nth-child(3) {
+    background-color: var(--purple);
+    margin-inline-start: 0%;
+    margin-inline-end: 0%;
+
+    @media (width > 900px) {
+        transform: rotate(180deg) rotate(4deg);
+        margin-inline-start: 8%;
+        margin-inline-end: 0%;
+    }
+    
+}
+
+.cta li:hover {
+    @media (width > 900px) {
+        transform: rotate(180deg);
+    }
+}
+
+.art-1,
+.art-2,
+.art-3 {
+    line-height: 100%;
+    color: var(--black);
+    margin-inline-start: var(--xsmall);
+    font-size: 1.1rem; /* Choose Base Size for Mobile */
+}
+
+@media (width > 600px) {
+        .art-1 { font-size: clamp(1.1rem, 1rem + 2.6vw, 2.6rem); }
+        .art-2 { font-size: clamp(1rem, 1rem + 2.1vw, 2.2rem); }
+        .art-3 { font-size: clamp(1.4rem, 1rem + 2.8vw, 3rem); }
+    }
+
+.article-link {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+}
+
+.article-card {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+}
+
+
+
+
+
+
+
+
+/* .cta {
+    display: grid;
     grid-auto-flow: column;
     gap: 1.6rem;
     width: max-content;
@@ -237,8 +355,18 @@ section {
     display: flex;
     justify-content: flex-end;
     padding: clamp(0.4rem, 0.3rem + 1vw, 0.75rem);
-    transition: transform 0.55s cubic-bezier(.34, 1.56, .64, 1);
+    transition: transform 0.55s cubic-bezier(0.34, 1.56, 0.64, 1);
+
+    @media (width > 900px) {
+        writing-mode: vertical-rl;
+        text-orientation: mixed;
+        display: flex;
+        justify-content: flex-end;
+        padding: clamp(0.4rem, 0.3rem + 1vw, 0.75rem);
+        transition: transform 0.55s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
 }
+
 
 .cta li:nth-child(1) {
     background-color: var(--green);
@@ -301,4 +429,4 @@ section {
     width: 100%;
     height: 100%;
     align-items: center;
-}
+} */
