@@ -456,11 +456,16 @@ article:last-child {
 
 footer {
     display: flex;
+    flex-direction: column;
     width: 100%;
-    height: 40svh;
     padding-inline: var(--xsmall);
     padding-block-end: var(--xsmall);
     background-color: var(--black);
+
+    @media (width > 900px) {
+        flex-direction: row;
+        height: 45svh;
+    }
 }
 
 .filler,
@@ -470,34 +475,36 @@ footer {
     justify-content: flex-end;
     align-items: flex-start;
     width: 100%;
-    padding: var(--xsmall);
+    padding: var(--small);
     color: var(--white);
     background-color: var(--black);
-    border-top: var(--btn-border) solid var(--white);
-    border-bottom: var(--btn-border) solid var(--white);
 }
 
 .filler {
-    border-left: var(--btn-border) solid var(--white);
+    width: 100%;
 
     @media (width > 900px) {
         width: 44%;
+        padding: var(--xsmall);
     }
 
     @media (width > 1200px) {
         width: 40%;
+        padding: var(--xsmall);
     }
 }
 
 .next-article {
-    border-right: var(--btn-border) solid var(--white);
+    width: 100%;
 
     @media (width > 900px) {
         width: 56%;
+        padding: var(--xsmall);
     }
 
     @media (width > 1200px) {
         width: 60%;
+        padding: var(--xsmall);
     }
 }
 
@@ -511,6 +518,7 @@ footer {
     height: 100%;
     text-decoration: none;
     color: inherit;
+    margin-block-end: 0.25rem;
 }
 
 .left a.white {
@@ -518,7 +526,9 @@ footer {
 }
 
 .next-article svg {
-    transition: transform 0.2s ease;
+    width: clamp(1.35rem, 4vw, 3rem);
+    height: auto;
+    transition: transform 0.25s cubic-bezier(.34, 1.56, .64, 1);
     transform-origin: center;
 }
 
@@ -531,8 +541,23 @@ footer {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding-inline-end: 0.5rem;
+    align-items: flex-end;
+    padding-inline-end: 1rem;
 }
+
+.border {
+    border: var(--btn-border) solid var(--white);
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+
+    @media (width > 900px) {
+        flex-direction: row;
+    }
+}
+
 
 
 /* article {
