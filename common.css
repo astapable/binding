@@ -470,8 +470,6 @@ footer {
 
 .filler,
 .next-article {
-    display: flex;
-    flex-direction: column;
     justify-content: flex-end;
     align-items: flex-start;
     width: 100%;
@@ -509,8 +507,6 @@ footer {
 }
 
 .next-article .next-link {
-    display: flex;
-    flex-direction: column;
     justify-content: flex-end;
     align-items: flex-start;
     gap: 0.5rem;
@@ -538,8 +534,6 @@ footer {
 
 .wrapper {
     width: 100%;
-    display: flex;
-    flex-direction: row;
     justify-content: space-between;
     align-items: flex-end;
     padding-inline-end: 1rem;
@@ -557,8 +551,6 @@ footer {
         flex-direction: row;
     }
 }
-
-
 
 /* article {
     display: flex;
