@@ -521,7 +521,7 @@ footer {
 .next-article .next-link {
     justify-content: flex-end;
     align-items: flex-start;
-    gap: 0.5rem;
+    gap: var(--xsmall);
     width: 100%;
     height: 100%;
     text-decoration: none;
@@ -548,7 +548,10 @@ footer {
     width: 100%;
     justify-content: space-between;
     align-items: flex-end;
-    padding-inline-end: 1rem;
+}
+
+.wrapper h2 {
+    margin-block-end: -0.5rem;
 }
 
 .border {
