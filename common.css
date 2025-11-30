@@ -66,7 +66,7 @@
     --green: #1FE333;
     --orange: #FF8000;
     --yellow: #D5FF9D;
-    --gray: #747474;
+    --gray: #8E8E8E;
 
 
     /* FONT SIZE */
@@ -247,6 +247,10 @@ figure {
     }
 }
 
+article:last-child {
+    padding-block-end: var(--xsmall);
+}
+
 img {
     display: block;
     height: 100%;
@@ -270,11 +274,15 @@ img {
 
 .source { /* Author and year */
     width: 100%;
+    align-items: center;
 }
 
 .heading { /* Text part of the Cover */
     justify-content: space-between;
     height: 100%;
+    background-color: var(--black);
+    border: var(--btn-border) solid var(--white);
+    align-items: center;
 
     @media (width > 600px) {
         padding: var(--large);
@@ -319,7 +327,6 @@ p {
 }
 
 .note { /* Smaller Text Element */
-    color: var(--gray);
     font-size: var(--footnote);
     width: 100%;
 
@@ -380,6 +387,10 @@ blockquote {
 }
 
 /* ==================== LINKS AND BUTTONS ==================== */
+.heading a {
+    color: var(--gray);
+}
+
 a {
     color: var(--black);
     text-decoration: underline;
@@ -449,10 +460,15 @@ a {
     color: var(--black);
 }
 
-
-article:last-child {
-    padding-block-end: var(--xsmall);
+.clr-wht {
+    color: var(--white);
 }
+
+.clr-gry {
+    color: var(--gray);
+}
+
+/* ==================== FOOTER ==================== */
 
 footer {
     display: flex;
@@ -476,33 +492,29 @@ footer {
     padding: var(--small);
     color: var(--white);
     background-color: var(--black);
+
+    @media (width > 900px) {
+        padding: var(--xsmall);
+    }
 }
 
 .filler {
-    width: 100%;
-
     @media (width > 900px) {
         width: 44%;
-        padding: var(--xsmall);
     }
 
     @media (width > 1200px) {
         width: 40%;
-        padding: var(--xsmall);
     }
 }
 
 .next-article {
-    width: 100%;
-
     @media (width > 900px) {
         width: 56%;
-        padding: var(--xsmall);
     }
 
     @media (width > 1200px) {
         width: 60%;
-        padding: var(--xsmall);
     }
 }
 
