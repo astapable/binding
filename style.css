@@ -176,10 +176,10 @@ section {
 }
 
 .ltr {
-  display: inline-block;
-  line-height: 1; 
-  font-stretch: 100%;
-  transform-origin: left bottom;
+    display: inline-block;
+    line-height: 1; 
+    font-stretch: 100%;
+    transform-origin: left bottom;
 }
 
 .logotype .ltr:nth-child(1) {
@@ -303,6 +303,10 @@ section {
     color: var(--black);
     margin-inline-start: var(--xsmall);
     font-size: 1.1rem;
+}
+
+.art-3 {
+    color: var(--white);
 }
 
 @media (width > 600px) {

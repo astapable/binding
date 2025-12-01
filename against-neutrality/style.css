@@ -1,0 +1,33 @@
+figure {
+    filter: hue-rotate(-205deg) saturate(1.15) brightness(2.25);
+}
+
+header, main {
+    a {
+        text-decoration-color: var(--orange);
+
+        &:hover {
+            color: var(--orange);
+            text-decoration-color: var(--orange);
+        }
+
+        &.purple {
+            background-color: var(--orange);
+            color: var(--black);
+            border: var(--btn-border) solid var(--orange);
+        }
+
+        &.white {
+            background-color: var(--white);
+            color: var(--black);
+            border: var(--btn-border) solid var(--white);
+        }
+
+        &.white:hover,
+        &.purple:hover {
+            background-color: var(--black);
+            color: var(--white);
+            border-color: var(--white);
+        }
+    }
+}

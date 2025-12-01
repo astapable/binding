@@ -15,3 +15,38 @@
 .cell-2 { grid-column: 2; grid-row: 1; justify-self: end;   }
 .cell-3 { grid-column: 1; grid-row: 2; justify-self: start; }
 .cell-4 { grid-column: 2; grid-row: 2; justify-self: start; } */
+
+figure {
+    filter: hue-rotate(-106deg) saturate(1.05) brightness(2);
+}
+
+header, main {
+    a {
+        text-decoration-color: var(--green);
+
+        &:hover {
+            color: var(--green);
+            text-decoration-color: var(--green);
+        }
+
+        &.purple {
+            background-color: var(--green);
+            color: var(--black);
+            border: var(--btn-border) solid var(--green);
+        }
+
+        &.white {
+            background-color: var(--white);
+            color: var(--black);
+            border: var(--btn-border) solid var(--white);
+        }
+
+        &.white:hover,
+        &.purple:hover {
+            background-color: var(--black);
+            color: var(--white);
+            border-color: var(--white);
+        }
+    }
+}
+
