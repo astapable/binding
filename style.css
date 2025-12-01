@@ -1,11 +1,11 @@
 /* ==================== HERO HEADER GRID SYSTEM ==================== */
 .grid {
-    display: grid;
+    /* display: grid;
     grid-template-columns: max-content max-content 1fr;
     grid-template-rows: repeat(6, auto);
     justify-items: start;
     align-items: start;
-    width: 100%;
+    width: 100%; */
 
     @media (width > 1000px) {
         grid-template-columns: 40% max-content 1fr; 
