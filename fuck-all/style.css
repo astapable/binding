@@ -24,13 +24,17 @@
     }
 }
 
-
 .loop {
     width: 100%;
     overflow: hidden;
     background: var(--green);
     white-space: nowrap;
     display: flex;
+    font-family: "Roboto";
+    font-weight: 400;
+    font-size: var(--title);
+    line-height: 120%;
+    letter-spacing: -2%;
 }
 
 .marquee {
