@@ -50,3 +50,9 @@ header, main {
     }
 }
 
+.loop {
+    background-color: var(--purple);
+    height: 20rem;
+    width: 100%;
+}
+
