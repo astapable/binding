@@ -1,0 +1,57 @@
+.stress {
+    width: 100%;
+    background-color: var(--white);
+    padding-inline: var(--small);
+    padding-block: var(--xlarge);
+    gap: var(--large);
+    align-items: center;
+    background-color: var(--black);
+    color: var(--white);
+    border: var(--btn-border) solid var(--white);
+}
+
+.quote {
+    font-family: "Roboto";
+    font-weight: 600;
+    font-size: var(--callout);
+    line-height: 100%;
+    letter-spacing: -2%;
+    text-decoration: none;
+
+    @media (width > 600px) {
+        width: 80%;
+        line-height: 105%;
+    }
+}
+
+
+.loop {
+    width: 100%;
+    overflow: hidden;
+    background: var(--green);
+    white-space: nowrap;
+    display: flex;
+}
+
+.marquee {
+    background: var(--green);
+}
+
+.marquee__inner {
+    display: inline-block;
+    animation: marquee 10s linear infinite;
+    align-items: center;
+}
+
+.marquee__inner span {
+    display: inline-block;
+}
+
+@keyframes marquee {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
