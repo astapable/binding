@@ -266,6 +266,7 @@ figure {
 
     @media (width > 1200px) {
         width: 40%;
+        padding-block-start: 0rem;
     }
 }
 
@@ -291,6 +292,15 @@ img {
     width: 100%;
     object-fit: contain;
     object-position: bottom center;
+    padding-block-start: 4rem;
+
+     @media (width > 600px) {
+        padding-block-start: 6rem;
+    }
+
+    @media (width > 900px) {
+        padding-block-start: var(--null);
+    }
 }
 
 .hero {
@@ -325,7 +335,7 @@ img {
     background-color: var(--black);
     border: var(--btn-border) solid var(--white);
     align-items: center;
-    padding-block: var(--xlarge);
+    padding-block: var(--large);
 }
 
 /* ==================== TEXT STYLING ==================== */
@@ -436,7 +446,8 @@ a {
     }
 
     &.purple,
-    &.white {
+    &.white,
+    &.black {
         display: flex;
         font-size: var(--footnote);
         padding-inline: 0.375rem;
@@ -466,10 +477,22 @@ a {
         border: var(--btn-border) solid var(--white);
     }
 
+    &.black {
+        background-color: var(--black);
+        color: var(--white);
+        border: var(--btn-border) solid var(--white);
+    }
+
     &.white:hover,
     &.purple:hover {
         background-color: var(--black);
         color: var(--white);
+        border: var(--btn-border) solid var(--white);
+    }
+
+    &.black:hover {
+        background-color: var(--white);
+        color: var(--black);
         border: var(--btn-border) solid var(--white);
     }
 }
