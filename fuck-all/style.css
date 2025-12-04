@@ -1,14 +1,12 @@
 .summary {
-    width: 100%;
     padding: var(--small);
     padding-block: var(--xlarge);
-    gap: var(--large);
     align-items: center;
+    background-color: var(--black);
     color: var(--white);
     border: var(--btn-border) solid var(--dark-gray);
-    position: relative;
-    background-color: var(--black);
     overflow: hidden;
+    position: relative;
 }
 
 .summary::before {
@@ -45,9 +43,7 @@
 }
 
 .warning {
-    width: 100%;
     padding: var(--small);
-    gap: var(--null);
     align-items: center;
     color: var(--white);
     background-color: var(--purple);
@@ -62,7 +58,6 @@
     white-space: nowrap;
     overflow: hidden;
     pointer-events: none;
-    display: flex;
     align-items: center;
 }
 
