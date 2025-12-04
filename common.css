@@ -235,8 +235,8 @@ section {
     background-color: var(--white);
     padding: var(--small);
     gap: var(--large);
-    align-items: center;
-    /* align-items: left; */
+    /* align-items: center; */
+    align-items: left;
 }
 
 /* ==================== MAIN COLUMNS VISUAL SETUP ==================== */
