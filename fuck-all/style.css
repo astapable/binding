@@ -1,6 +1,5 @@
 .stress {
     width: 100%;
-    background-color: var(--white);
     padding: var(--small);
     padding-block: var(--xlarge);
     gap: var(--large);
@@ -24,38 +23,3 @@
     }
 }
 
-.loop {
-    width: 100%;
-    overflow: hidden;
-    background: var(--green);
-    white-space: nowrap;
-    display: flex;
-    /* font-family: "Roboto";
-    font-weight: 400;
-    font-size: var(--title);
-    line-height: 120%;
-    letter-spacing: -2%; */
-}
-
-.marquee {
-    background: var(--green);
-}
-
-.marquee__inner {
-    display: inline-block;
-    animation: marquee 10s linear infinite;
-    align-items: center;
-}
-
-.marquee__inner p {
-    display: inline-block;
-}
-
-@keyframes marquee {
-    from {
-        transform: translateX(0);
-    }
-    to {
-        transform: translateX(-100%);
-    }
-}
