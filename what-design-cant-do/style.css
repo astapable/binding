@@ -50,40 +50,43 @@ header, main {
     }
 }
 
-
-
-.loop {
-    width: 100%;
-    overflow: hidden;
-    background-color: var(--green);
-}
-
-/* Внутренняя лента */
-.track {
-    display: flex;
-    width: max-content;     /* ширина по контенту */
-    animation: marquee 6s linear infinite;
-    will-change: transform; /* помогает сгладить дергания */
-}
-
-/* Сам блок (паттерн, текст, что угодно) */
-.item {
-    min-width: 300px;       /* примерная ширина блока */
-    height: 80px;
-    border: 1px solid #000;
-    display: flex;
+.warning {
+    padding: var(--small);
     align-items: center;
-    justify-content: center;
-    font-size: 24px;
+    color: var(--black);
+    background-color: var(--green);
+    overflow: hidden;
+    position: relative;
 }
 
-/* Ключевая магия: сдвигаем ленту ровно на половину её длины */
-@keyframes marquee {
-    0% {
-        transform: translate3d(0, 0, 0);
-    }
-    100% {
-        transform: translate3d(-50%, 0, 0);
-    }
+/* Absolute helps prevent  pushing the loop wrapper out of the grid */
+.loop {
+    position: absolute;
+    inset: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    pointer-events: none;
+    align-items: center;
+}
+
+.loop-item {
+    display: inline-flex;
+    white-space: nowrap;
+    animation: warning-loop 48s linear infinite;
+}
+
+.loop-item p {
+    font-family: "Chava";
+    font-weight: 400;
+    font-size: var(--title);
+    line-height: 120%;
+    letter-spacing: -2%;
+    display: inline-block;
+    white-space: nowrap;
+}
+
+@keyframes warning-loop {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
 }
 
