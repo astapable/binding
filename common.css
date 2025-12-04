@@ -67,6 +67,7 @@
     --orange: #FF8000;
     --yellow: #D5FF9D;
     --gray: #8E8E8E;
+    --dark-gray: #2E2E2E;
 
     /* FONT SIZE */
     --display: 2.25rem;
@@ -324,18 +325,7 @@ img {
     background-color: var(--black);
     border: var(--btn-border) solid var(--white);
     align-items: center;
-
-    @media (width > 600px) {
-        padding: var(--large);
-    }
-
-    @media (width > 900px) {
-        padding: var(--large);
-    }
-
-    @media (width > 1200px) {
-        padding: var(--large);
-    }
+    padding-block: var(--xlarge);
 }
 
 /* ==================== TEXT STYLING ==================== */

@@ -1,12 +1,33 @@
-.stress {
+.summary {
     width: 100%;
     padding: var(--small);
     padding-block: var(--xlarge);
     gap: var(--large);
     align-items: center;
-    background-color: var(--black);
     color: var(--white);
-    border: var(--btn-border) solid var(--white);
+    border: var(--btn-border) solid var(--dark-gray);
+    position: relative;
+    background-color: var(--black);
+    overflow: hidden;
+}
+
+.summary::before {
+    content: "";
+    position: absolute;
+    inset: -100%;
+    background-image:
+        linear-gradient(to right,rgba(255, 255, 255, 0.10) 1px, transparent 0.063rem),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.10) 1px, transparent 0.063rem);
+    background-size: 0.5rem 0.5rem;
+    transform: rotate(45deg);
+    transform-origin: center;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.summary > * {
+    position: relative;
+    z-index: 1;
 }
 
 .quote {
@@ -23,3 +44,45 @@
     }
 }
 
+.warning {
+    width: 100%;
+    padding: var(--small);
+    gap: var(--null);
+    align-items: center;
+    color: var(--white);
+    background-color: var(--purple);
+    overflow: hidden;
+    position: relative;
+}
+
+/* Absolute helps prevent  pushing the loop wrapper out of the grid */
+.loop {
+    position: absolute;
+    inset: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    pointer-events: none;
+    display: flex;
+    align-items: center;
+}
+
+.loop-item {
+    display: inline-flex;
+    white-space: nowrap;
+    animation: warning-loop 48s linear infinite;
+}
+
+.loop-item p {
+    font-family: "Chava";
+    font-weight: 400;
+    font-size: var(--title);
+    line-height: 120%;
+    letter-spacing: -2%;
+    display: inline-block;
+    white-space: nowrap;
+}
+
+@keyframes warning-loop {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+}
