@@ -81,7 +81,7 @@
         --display: 4.5rem;
         --headline: 3rem;
         --title: 1.75rem;
-        --callout: 2.5rem;
+        --callout: 2.25rem;
         --body: 1.125rem;
         --footnote: 1rem;
     }
@@ -89,8 +89,8 @@
     @media (width > 900px) {
         --display: 3rem;
         --headline: 2.25rem;
-        --title: 1.15rem;
-        --callout: 2rem;
+        --title: 1.25rem;
+        --callout: 1.75rem;
         --body: 1rem;
         --footnote: 0.875rem;
     }
@@ -235,8 +235,95 @@ section {
     background-color: var(--white);
     padding: var(--small);
     gap: var(--large);
-    /* align-items: center; */
     align-items: left;
+}
+
+.summary {
+    padding: var(--medium);
+    padding-block: var(--large);
+    align-items: center;
+    background-color: var(--black);
+    color: var(--white);
+    border: var(--btn-border) solid var(--dark-gray);
+    overflow: hidden;
+    position: relative;
+
+    @media (width > 600px) {
+        padding: var(--xsmall);
+        padding-block: var(--xlarge);
+    }
+
+    @media (width > 900px) {
+        padding: var(--small);
+        padding-block: var(--large);
+    }
+}
+
+.summary::before {
+    content: "";
+    position: absolute;
+    inset: -200%;
+    background-image:
+        linear-gradient(to right,rgba(255, 255, 255, 0.10) 1px, transparent 0.063rem),
+        linear-gradient(to bottom, rgba(255, 255, 255, 0.10) 1px, transparent 0.063rem);
+    background-size: 0.5rem 0.5rem;
+    transform: rotate(45deg);
+    transform-origin: center;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.summary > * {
+    position: relative;
+    z-index: 1;
+}
+
+.warning {
+    padding: var(--small);
+    align-items: center;
+    color: var(--white);
+    background-color: var(--purple);
+    overflow: hidden;
+    position: relative;
+
+    @media (width > 600px) {
+        padding: var(--xsmall);
+    }
+
+    @media (width > 1200px) {
+        padding: var(--small);
+    }
+}
+
+/* Absolute helps prevent  pushing the loop wrapper out of the grid */
+.loop {
+    position: absolute;
+    inset: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    pointer-events: none;
+    align-items: center;
+}
+
+.loop-item {
+    display: inline-flex;
+    white-space: nowrap;
+    animation: warning-loop 48s linear infinite;
+}
+
+.loop-item p {
+    font-family: "Chava";
+    font-weight: 400;
+    font-size: var(--title);
+    line-height: 120%;
+    letter-spacing: -2%;
+    display: inline-block;
+    white-space: nowrap;
+}
+
+@keyframes warning-loop {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
 }
 
 /* ==================== MAIN COLUMNS VISUAL SETUP ==================== */
@@ -400,33 +487,22 @@ p {
 blockquote {
     width: 100%;
     align-items: center;
-    text-wrap: balance;
+    
+    @media (width > 1200px) {
+        text-wrap: balance;
+    }
 }
 
 .quote {
     font-family: "Roboto";
     font-weight: 600;
     font-size: var(--callout);
-    line-height: 100%;
+    line-height: 110%;
     letter-spacing: -2%;
-    text-decoration: underline;
-    text-decoration-color: var(--yellow);
-    text-decoration-thickness: 1.313rem;
-    text-underline-offset: -1.15rem;
-    text-decoration-skip-ink: none;
 
     @media (width > 600px) {
         width: 80%;
         line-height: 105%;
-        text-decoration-thickness: 2.15rem;
-        text-underline-offset: -1.75rem;
-    }
-
-    @media (width > 900px) {
-        width: 80%;
-        line-height: 105%;
-        text-decoration-thickness: 2.05rem;
-        text-underline-offset: -1.7rem;
     }
 }
 
@@ -531,6 +607,10 @@ a {
 
 .clr-gry {
     color: var(--gray);
+}
+
+.bg-org {
+    background-color: var(--orange);
 }
 
 /* ==================== FOOTER ==================== */

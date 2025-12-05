@@ -32,76 +32,21 @@ header, main {
     }
 }
 
-.warning {
-    padding: var(--small);
-    align-items: center;
-    color: var(--black);
-    background-color: var(--green);
-    overflow: hidden;
-    position: relative;
-}
-
-/* Absolute helps prevent  pushing the loop wrapper out of the grid */
-.loop {
-    position: absolute;
-    inset: 0;
-    white-space: nowrap;
-    overflow: hidden;
-    pointer-events: none;
-    align-items: center;
-}
-
-.loop-item {
-    display: inline-flex;
-    white-space: nowrap;
-    animation: warning-loop 48s linear infinite;
-}
-
-.loop-item p {
-    font-family: "Chava";
-    font-weight: 400;
-    font-size: var(--title);
-    line-height: 120%;
-    letter-spacing: -2%;
-    display: inline-block;
-    white-space: nowrap;
-}
-
-@keyframes warning-loop {
-    0%   { transform: translateX(0); }
-    100% { transform: translateX(-100%); }
-}
-
 .summary {
-    padding: var(--small);
+    padding: var(--xsmall);
     padding-block: var(--large);
-    align-items: center;
     background-color: var(--white);
     color: var(--black);
     border: 0.125rem solid rgba(13, 13, 13, 0.1);
-    overflow: hidden;
-    position: relative;
 }
 
 .summary::before {
-    content: "";
-    position: absolute;
-    inset: -100%;
     background-image:
         linear-gradient(to right,rgba(13, 13, 13, 0.1) 1px, transparent 0.063rem),
-        linear-gradient(to bottom, rgba(13, 13, 13, 0.1) 0px, transparent 0.063rem);
-    background-size: 0.5rem 0.5rem;
-    transform: rotate(45deg);
-    transform-origin: center;
-    pointer-events: none;
-    z-index: 0;
+        linear-gradient(to bottom, rgba(13, 13, 13, 0.1) 1px, transparent 0.063rem);
 }
 
-.summary > * {
-    position: relative;
-    z-index: 1;
-}
-
-.quote {
-    text-decoration: none;
+.warning {
+    color: var(--black);
+    background-color: var(--green);
 }

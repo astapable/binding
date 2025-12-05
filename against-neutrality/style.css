@@ -31,3 +31,7 @@ header, main {
         }
     }
 }
+
+blockquote p {
+color: var(--gray);
+}
