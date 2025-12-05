@@ -336,6 +336,11 @@ footer {
     
 }
 
+.wrapper a:hover {
+    color: var(--purple);
+    
+}
+
 .next-article {
     align-items: flex-start;
     gap: var(--large);
