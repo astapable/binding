@@ -1,11 +1,5 @@
 /* ==================== HERO HEADER GRID SYSTEM ==================== */
-.grid {
-    /* display: grid;
-    grid-template-columns: max-content max-content 1fr;
-    grid-template-rows: repeat(6, auto);
-    justify-items: start;
-    align-items: start;
-    width: 100%; */
+/* .grid {
 
     @media (width > 1000px) {
         grid-template-columns: 40% max-content 1fr; 
@@ -27,7 +21,7 @@
     @media (width > 800px) {
         display: initial; 
     }
-}
+} */
 
 /* ==================== MAIN WRAPPERS ==================== */
 main {
@@ -66,7 +60,7 @@ article {
     }
 }
 
-section {
+.intro, .content {
     display: flex;
     flex-direction: column;
     width: 100%; 
@@ -82,7 +76,6 @@ section {
 }
 
 .intro {
-    width: 100%;
     overflow: hidden;
     height: 100svh;
 
@@ -100,7 +93,6 @@ section {
 .content {
     display: flex;
     align-items: flex-end;
-    width: 100%;
 
     @media (width > 900px) {
         width: 28%;
@@ -330,3 +322,43 @@ section {
     height: 100%;
     align-items: center;
 }
+
+footer {
+    height: auto;
+}
+
+.wrapper {
+    gap: var(--xsmall);
+}
+
+.wrapper a {
+    color: var(--white);
+    
+}
+
+.next-article {
+    align-items: flex-start;
+    gap: var(--large);
+
+
+    @media (width > 900px) {
+        padding-block-start: var(--large);
+        padding-inline-end: var(--large);
+    }
+}
+
+.next-article .wrapper {
+    align-items: flex-start;
+}
+
+.doppelganger {
+    display: flex;
+    flex-direction: column;
+    padding-inline: var(--xsmall);
+    padding-block-end: var(--xsmall);
+    gap: var(--xsmall);
+}
+
+
+
+
