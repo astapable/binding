@@ -522,11 +522,6 @@ a {
     text-decoration-color: var(--purple);
     text-decoration-thickness: 0.125rem;
 
-    /* &:hover {
-        color: var(--purple);
-        text-decoration-color: var(--purple);
-    } */
-
     &.purple,
     &.white,
     &.black {
