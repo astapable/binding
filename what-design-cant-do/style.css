@@ -2,14 +2,14 @@ figure {
     filter: hue-rotate(-106deg) saturate(1.05) brightness(2);
 }
 
+a:not(.purple):not(.white):not(.black):hover {
+    color: var(--green);
+    text-decoration-color: var(--green);
+}
+
 header, main {
     a {
         text-decoration-color: var(--green);
-
-        &:hover {
-            color: var(--green);
-            text-decoration-color: var(--green);
-        }
 
         &.purple {
             background-color: var(--green);

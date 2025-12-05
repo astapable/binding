@@ -2,14 +2,14 @@ figure {
     filter: hue-rotate(-205deg) saturate(1.15) brightness(2.25);
 }
 
+a:not(.purple):not(.white):not(.black):hover {
+    color: var(--orange);
+    text-decoration-color: var(--orange);
+}
+
 header, main {
     a {
         text-decoration-color: var(--orange);
-
-        &:hover {
-            color: var(--orange);
-            text-decoration-color: var(--orange);
-        }
 
         &.purple {
             background-color: var(--orange);
@@ -23,11 +23,23 @@ header, main {
             border: var(--btn-border) solid var(--white);
         }
 
+        &.black {
+            background-color: var(--black);
+            color: var(--white);
+            border: var(--btn-border) solid var(--white);
+        }
+
         &.white:hover,
         &.purple:hover {
             background-color: var(--black);
             color: var(--white);
             border-color: var(--white);
+        }
+
+        &.black:hover {
+            background-color: var(--white);
+            color: var(--black);
+            border: var(--btn-border) solid var(--white);
         }
     }
 }

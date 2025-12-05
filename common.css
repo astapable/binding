@@ -511,16 +511,21 @@ blockquote {
     color: var(--gray);
 }
 
+a:not(.purple):not(.white):not(.black):hover {
+    color: var(--purple);
+    text-decoration-color: var(--purple);
+}
+
 a {
     color: var(--black);
     text-decoration: underline;
     text-decoration-color: var(--purple);
     text-decoration-thickness: 0.125rem;
 
-    &:hover {
+    /* &:hover {
         color: var(--purple);
         text-decoration-color: var(--purple);
-    }
+    } */
 
     &.purple,
     &.white,
